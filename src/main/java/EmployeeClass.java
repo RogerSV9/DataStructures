@@ -15,20 +15,29 @@ public class EmployeeClass {
         this.companyName = companyName;
     }
 
-    public void addEmployee(String name, String surname, Date birthday, double salary, String companyName) throws MyException{
-        this.name = name;
-        this.surname = surname;
-        this.birthday = birthday;
-        this.salary = salary;
-        this.companyName = companyName;
-    }
-
     public String getName(){
         return this.name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getSurname() {
+        return this.surname;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public Date getBirthday() {
+        return birthday;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    //We have to implement this compareTo to return the name that we will use later in MyManager class
+    public int compareTo(EmployeeClass o) {
+        return this.getName().compareTo(o.getName());
     }
 
 

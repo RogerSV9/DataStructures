@@ -1,29 +1,27 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class CompanyClass {
-    public String name;
+    public String companyName;
     public String description;
+    private List<EmployeeClass> employees;
 
     public CompanyClass (String name, String description){
-        this.name = name;
+        this.companyName = name;
         this.description = description;
+        this.employees=new LinkedList<EmployeeClass>();
     }
     public void addCompany (String name, String description){
-        this.name = name;
+        this.companyName = name;
         this.description = description;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public String getCompanyName() {
+        return companyName;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 }
