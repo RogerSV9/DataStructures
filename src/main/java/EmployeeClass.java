@@ -1,26 +1,28 @@
 import java.util.Date;
 
 public class EmployeeClass {
-    public String name;
-    public String surname;
-    public Date birthday;
-    public double salary;
-    public String companyName;
+    //Attributes
+    String name, username, companyName;
+    Date birthday;
+    double salary;
 
-    public EmployeeClass(String name, String surname, Date birthday, double salary, String companyName){
+    //Constructor
+
+    public EmployeeClass(String name, String username, String companyName, Date birthday, double salary) {
         this.name = name;
-        this.surname = surname;
+        this.username = username;
+        this.companyName = companyName;
         this.birthday = birthday;
         this.salary = salary;
-        this.companyName = companyName;
     }
 
-    public String getName(){
-        return this.name;
+    //Method
+    public String getName() {
+        return name;
     }
 
-    public String getSurname() {
-        return this.surname;
+    public String getUsername() {
+        return username;
     }
 
     public String getCompanyName() {
@@ -39,6 +41,5 @@ public class EmployeeClass {
     public int compareTo(EmployeeClass o) {
         return this.getName().compareTo(o.getName());
     }
-
 
 }

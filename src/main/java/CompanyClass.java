@@ -24,4 +24,11 @@ public class CompanyClass {
         return description;
     }
 
+    public List<EmployeeClass> employees() {
+        return this.employees;
+    }
+
+    public void addEmployee(EmployeeClass e) {
+        this.employees.add(e);
+    }
 }
